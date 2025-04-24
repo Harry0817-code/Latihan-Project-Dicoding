@@ -4,30 +4,50 @@ body {
   padding: 0;
 }
 
+header{
+  display: inline;
+}
+
 main{
   padding: 20px;
-  margin: 0 auto;
-
-  overflow: auto;
+  display: flex;
 }
 
 .jumbotron {
   font-size: 20px;
-  padding: 60px;
-  background-color: lightgreen;
-  text-align: center;
+  padding: 10px;
+  background-color: burlywood;
   color: white;
 }
 
+#header-sekolah{
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+#img-logo-sekolah{
+  float: left;
+  width: 82px;
+  margin-right: 7px;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+}
+
 nav li {
-  display: inline;
   list-style-type: none;
   margin-right: 20px;
 }
 
 nav {
-  background-color: green;
+  background-color: moccasin;
   padding: 5px;
+
+  position: sticky;
+  top: 0;
 }
 
 nav a{
@@ -64,23 +84,28 @@ h2, h3 {
   
   padding: 20px;
   margin-top: 20px;
+  margin-right: 20px;
 }
   
 footer {
   padding: 20px;
   color: white;
-  background-color: #00a2c6;
+  background-color: burlywood;
 }
 
 #content{
-  float: left;
-  width: 75%;
+  flex: 5;
 }
 
 aside{
-  float: right;
-  width: 25%;
-  padding-left: 20px;
+  flex: 1;
+}
+
+#container-aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #img-logo{
@@ -90,8 +115,25 @@ aside{
 *{
   box-sizing: border-box;
 }
-/* aside{
-  float: right;
-  width: 25%;
-  padding: 20px;
-} */
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
