@@ -34,6 +34,7 @@ main{
 nav ul {
   padding-inline: 4rem;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav li {
@@ -60,6 +61,36 @@ nav a{
   color: black;
   margin: 4px 2px;
   transition: 0.3s;
+}
+
+#img-slideshow-container{
+  display: flex;
+  width: 126px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 9px;
+}
+
+#img-keyframe-sekolah{
+  animation: animasi-gambar 2s infinite;
+  width: 82px;
+}
+
+@keyframes animasi-gambar {
+  0% { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
 }
 
 .featured-image {
